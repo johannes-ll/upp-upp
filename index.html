@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konferens Uppsala</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Upp-Upp</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <!-- <li><a href="#abstract">Abstract</a></li> -->
+                <li><a href="#location">Location</a></li>
+            </ul>
+        </nav>            
+    </header>
+    <main>
+        <section id="about">
+            <div class="img-parent"></div>
+            <h2>About</h2>
+            <p>
+                Dear fellow Statisticians in Uppsala,
+                I have the pleasure to invite you all to this year's Upp-Upp conference (the internal conference for Statisticians in Uppsala). This time, it will take place at the Ångström laboratory on <strong>March 14, 8.45-13</strong>. For details, see the attached pdf file.
+                Fika and a lunch sandwich will be served.
+                All talks are 20 minutes long with 5 minutes time for questions and discussion afterwards.
+            </p>
+            <p>
+                To see abstracts, click on an item inside the schedule.
+            </p>
+        </section>
+        <section id="schedule">
+            <h2>Schedule</h2>
+            <div id="Welcome" class="noinput">
+                <p>8:45 AM</p>
+                <h3>Welcome</h3>
+            </div>
+            <div id="Engblom">
+                <p>8:50 AM</p>
+                <h3>Stefan Engblom, IT</h3>
+                <p>Bayesian Models for National-Scale Disease Spread: From Cattle to COVID-19.</p>
+            </div>
+            <p class="abstract" id="Abstract-Engblom">
+                In this talk, I will present Bayesian modeling approaches for tracking and predicting infectious disease spread at a
+                national scale. These methods enhance real-time monitoring and also help improve our understanding of the disease
+                dynamics. 
+                I will first discuss the endemic spread of Shiga toxin-producing E. coli in Swedish cattle, where sparse and low-
+                informative prevalence data, combined with a decade-long transport network, pose interesting challenges. Despite these
+                limitations, our Bayesian simulation-driven approach successfully reconstructs disease spread, producing an in silico
+                model with predictive value. <br> <br>
+                Next, I will highlight a COVID-19 modeling effort from the cross-disciplinary CRUSH Covid project at Uppsala
+                University, launched in October 2020 to support local authorities. Here, we developed a time-continuous compartmental
+                model, structurally akin to a chemical reaction network, with parameters estimated using Bayesian techniques and a
+                Kalman filter applied to healthcare data. This approach yielded valuable insights into pandemic dynamics, while also
+                underscoring the complexities and uncertainties inherent in real-time epidemiological modeling.
+            </p>
+        
+            <div id="Eriksson">
+                <p>9:15 AM</p>
+                <h3>Viktor Eriksson, Statistics</h3>
+                <p>An extensive comparison of small sample properties of variance-covariance estimators for MLEs in the context of ARMA models.</p>
+            </div>
+            <p class="abstract" id="Abstract-Eriksson">A good approach for parameter estimation in autoregressive moving-average (ARMA) models is the maximum
+                likelihood method (MLE). The inverse Fisher's information matrix (FIM) is an often used estimator for the variance-
+                covariance matrix (VCM) of the MLE. The small sample properties of several FIM-based estimators for the VCM of
+                the MLE are investigated in a Monte Carlo simulation. We find that the Box-Jenkins asymptotic estimator and the FIM
+                performed best in respect to mean squared error (MSE) and relative bias. Though the observed FIM performed worst in
+                respect to same measures, it is however best for providing moderately conservative confidence intervals for ARMA
+                parameters.</p>
+        
+            <div id="Coffee-Break" class="noinput">
+                <p>9:40 AM</p>
+                <div>
+                    <h3>Coffee break</h3>
+                </div>
+            </div>
+        
+            <div id="Rezaei">
+                <p>10:00 AM</p>
+                <h3>Hajar Rezaei, SLU</h3>
+                <p>A note on an extended Bayes estimator in multivariate normal distribution.</p>
+            </div>
+            <p class="abstract" id="Abstract-Rezaei">This research addresses the problem of estimating the mean vector of a multivariate normal distribution when the
+                covariance matrix is unknown. We develop an extended class of Bayes estimators under the quadratic loss
+                function and investigate their minimax properties. Building upon previous works, we generalize the minimax Bayes
+                estimators by incorporating a hierarchical prior structure where the covariance matrix follows a Wishart distribution.
+                Our approach leads to an extended Bayes estimator that satisfies minimaxity conditions under specific regularity
+                constraints. The results contribute to the broader literature on shrinkage estimation in high-dimensional regression
+                analysis. <br> <br>
+                Based on joint work with M. Arashi and R. Belaghi.</p>
+        
+            <div id="Avelin">
+                <p>10:25 AM</p>
+                <h3>Benny Avelin, Mathematics</h3>
+                <p>Understanding the geometry of data sets with the Graph Laplacian.</p>
+            </div>
+            <p class="abstract" id="Abstract-Avelin">High dimensional data sets are today ubiquitous in many areas of research, and understanding them is of central
+                importance. Such a data set is commonly assumed to lie on some unknown manifold, and in this talk I will describe and
+                introduce methods one can use to study the geometry of these manifolds, based mainly on the Graph Laplacian. In
+                particular I will focus on how one can detect singularities, such as self intersections. <br> <br>
+                This is based on joint work with Martin Andersson.</p>
+        
+            <div id="Break" class="noinput">
+                <p>10:50 AM</p>
+                <div>
+                    <h3>Break</h3>
+                </div>
+            </div>
+        
+            <div id="Yang">
+                <p>11:00 AM</p>
+                <h3>Yukai Yang, Statistics</h3>
+                <p>Moment matching based sparse and noisy point cloud registration.</p>
+            </div>
+            <p class="abstract" id="Abstract-Yang">Point cloud registration is a fundamental problem in Simultaneous Localization and Mapping (SLAM), particularly in
+                robotics applications where sensor data is often sparse and noisy. In this paper, we introduce a novel approach to point
+                cloud registration based on moment matching, specifically designed to handle challenging conditions such as low point
+                density and measurement noise. Our method is applied to millimeter-wave radar data collected from a moving vehicle,
+                demonstrating its effectiveness in real-world scenarios. A key advantage of our approach is its computational efficiency.
+                We ensure that registration between consecutive frames is completed within 100 milliseconds, making it suitable for
+                real-time applications. Additionally, we evaluate the accuracy of our method by comparing it against widely used
+                registration techniques. Despite operating on significantly sparser radar data, our method achieves comparable accuracy
+                to state-of-the-art LiDAR-based approaches, which rely on much denser point clouds. These results highlight the
+                potential of moment matching as an efficient and robust solution for point cloud registration in SLAM, particularly in
+                resource-constrained environments where dense LiDAR scans are not available.</p>
+        
+            <div id="Brömssen">
+                <p>11:25 AM</p>
+                <h3>Claudia von Brömssen, SLU</h3>
+                <p>Temporal trend analysis in environmental monitoring programs with high <br>spatial but low temporal resolution.</p>
+            </div>
+            <p class="abstract" id="Abstract-Brömssen">Swedish environmental monitoring programmes collect large amount of data to follow the state of the environment as
+                well as prevailing changes over time. For some programmes the data structure does not allow the use of traditional trend
+                analysis methods, as the temporal resolution is too low. Here, we focus on the analysis of temporal trends for chemical
+                variables from the Swedish lake survey with observations once each six years in a rotating panel for a total of 4800
+                lakes.</p>
+        
+            <div id="Last-Break" class="noinput">
+                <p>11:50 AM</p>
+                <div>
+                    <h3>Break</h3>
+                </div>
+            </div>
+        
+            <div id="Ekström">
+                <p>12:00 PM</p>
+                <h3>Erik Ekström, Mathematics</h3>
+                <p>Sequential analysis vs. methods with a fixed sample size.</p>
+            </div>
+            <p class="abstract" id="Abstract-Ekström">In contrast to statistical procedures relying on a fixed sample
+                size, sequential analysis allows for dynamic decision-making as data is
+                collected. In this way, sequential methods reduce the average number of
+                observations required to obtain a certain level of precision, but by how
+                much? To answer this, we restrict our attention to a stylized problem
+                formulation of testing the drift of a Brownian motion, for which the
+                reduction can be quantified</p>
+        
+            <div id="Lunch" class="noinput">
+                <p>12:25 PM</p>
+                <div>
+                    <h3>Lunch</h3>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- <section id="abstract">
+            <h2>Abstract</h2>
+        </section> -->
+        <section id="location">
+            <h2>Location</h2>
+            <iframe width="100%" height="420" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"src="https://use.mazemap.com/embed.html#v=1&campusid=49&zlevel=2&center=17.646236,59.839857&zoom=18&sharepoitype=poi&sharepoi=1000824549&utm_medium=iframe" style={{ border: '1px solid grey' }} allow="geolocation"></iframe><br/><small><a href="https://www.mazemap.com/">Map by MazeMap</a></small>
+            <p>Room 101130, Ångström laboratory, house 10, 1st floor.</p>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>Organizer: <a href="https://www.uu.se/kontakt-och-organisation/personal?query=N2-6">Rolf Larsson</a></p>
+            <p>Want a similar website? Contact: <a href="mailto:johannesll@outlook.com">johannesll@outlook.com</a></p>
+        </div>
+    </footer>
+    <script>
+        // select all schedule divs that contain h3 elements
+        document.querySelectorAll('#schedule div').forEach(function(event) {
+            event.addEventListener('click', function() {
+                try {
+                    const abstract = document.getElementById('Abstract-' + event.id)
+                    abstract.classList.toggle('active')
+                    event.classList.toggle('clicked')
+                } catch {0}
+            })
+        })
+    </script>
+</body>
+</html>

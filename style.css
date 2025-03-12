@@ -1,0 +1,257 @@
+html {
+    --accent: rgb(153, 0, 0);
+    --bg: #FFFFFF;
+    --bg-secondary: #CCCCCC;
+
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('src/WorkSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('src/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    background: var(--bg);
+    font-family: 'WorkSans', sans-serif;
+    max-width: 980px;
+    border: 8px;
+    margin: auto;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    list-style: none;
+    text-transform: capitalize;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.img-parent {
+    width: 100%;
+    max-height: 420px;
+    aspect-ratio: 16/9;
+    background: var(--bg-secondary);
+    background-image: url('https://www.uu.se/images/18.6d9b217518f3e32eb8d15140/1714983596471/sn%C3%B6flinga4.jpg');
+    background-size: cover;
+}
+
+#schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#schedule > div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: baseline;
+    width: 100%;
+    background: #f2f2f2;
+    cursor: pointer;
+}
+
+#schedule > div > p:first-of-type {
+    white-space: nowrap;
+    width: 7ch;
+    margin-left: 8px;
+}
+
+#schedule > div > h3 {
+    white-space: nowrap;
+}
+
+.abstract {
+    max-height: 0;
+    overflow-y: hidden;
+    margin: 0;
+    transition: 200ms;
+}
+
+.active {
+    max-height: 500px;
+    margin: 16px 0;
+}
+
+#schedule > div {
+    position: relative;
+    transition: background 200ms;
+}
+
+#schedule > div:hover {
+    background-color: #DFDFDF ;
+}
+
+#schedule > div.clicked {
+    background: var(--bg-secondary);
+    transition: 200ms;
+}
+
+#schedule > div::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    position: absolute;
+    opacity: .7;
+    right: 16px; 
+    top: 50%; 
+    transform: rotate(45deg) translateY(-50%); 
+    transition: transform 0.3s ease-in-out;
+}
+
+#schedule > div.clicked::after {
+    transform: rotate(225deg); 
+}
+
+#schedule > div.noinput {
+    background: #dddddd;
+    margin-bottom: 4px;
+    cursor:auto;
+}
+
+.noinput::after {
+    display: none;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    margin-top: 32px;
+    background: #dddddd;
+    border-top: #dddddd 1px solid;
+    opacity: .8;
+}
+
+footer > div {
+    max-width: 980px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+
+footer > div > p > a {
+    white-space: nowrap;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        margin: 0 16px;
+        padding: 0;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px 0;
+    }
+
+    footer div {
+        margin: 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0;
+    }
+
+    #schedule > div {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 16px;
+        gap: 4px;
+        width: auto;
+    }
+
+    #schedule > div > p:first-of-type {
+        margin-left: 0;
+        font-weight: bold;
+        color: var(--accent);
+    }
+
+    #schedule > div h3 {
+        font-size: 1.1rem;
+    }
+
+    .abstract {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    #location iframe {
+        height: 300px;
+    }
+
+    #schedule > div::after {
+        right: 12px;
+        top: 24px;
+    }
+
+    /* Adjust no-input items */
+    #schedule > div.noinput {
+        padding: 8px 16px;
+        width: auto;
+    }
+
+    /* Improve touch targets */
+    #schedule > div {
+        min-height: 48px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    body {
+        font-size: 0.9rem;
+    }
+
+    #location iframe {
+        height: 250px;
+    }
+
+    #schedule > div {
+        padding: 12px;
+    }
+}
